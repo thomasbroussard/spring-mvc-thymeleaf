@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" lang="en">
+  	<head th:insert="fragments/layout.html :: headerContent ">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	</head>
+    
+    
+    <body>
+    	<div th:insert="fragments/layout.html :: fragmentSample"></div>
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>Reviewer Name</th>
+    				<th>Reviewer BirthDate</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr th:each="reviewer : ${reviewersList}">
+    				<td><span th:text="${reviewer.name}">Reviewer name</span></td>
+    				<td><span th:text="${reviewer.birthDate}">Reviewer birthDate</span></td>
+    			</tr>
+    		</tbody>
+    		
+    	
+    	</table>
+    </body>
+</html>
