@@ -2,9 +2,13 @@ package fr.epita.datamodel;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Reviewer {
 	
 	private String name;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate birthDate;
 	
 	
