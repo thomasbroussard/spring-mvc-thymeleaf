@@ -59,6 +59,12 @@ public class ApplicationConfig implements WebMvcConfigurer, ApplicationContextAw
 		return resolver;
 	}
 
+	
+//	@Bean
+//	public MyMovieDAO movieDao() {
+//		return new MyMyMovieDAO();
+//	}
+//	
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/index.html").setViewName("index");
